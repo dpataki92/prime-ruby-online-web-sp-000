@@ -8,7 +8,7 @@ end
 
 def prime_2?(int)
 
-  if int <= 1 ?
+  if int <= 1
     return false
   else
     arr = (2...int).to_a
