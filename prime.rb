@@ -16,5 +16,5 @@ def prime_2?(int)
   end
 end
 
-puts Benchmark.measure { prime? }
-puts Benchmark.measure { prime_2? }
+puts Benchmark.measure { prime?(17) }
+puts Benchmark.measure { prime_2?(17) }
