@@ -1,3 +1,4 @@
+require 'benchmark'
 
 def prime?(int)
 
@@ -14,3 +15,6 @@ def prime_2?(int)
     arr.none? {|x| int % x == 0}
   end
 end
+
+puts Benchmark.measure { prime? }
+puts Benchmark.measure { prime_2? }
