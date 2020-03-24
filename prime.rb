@@ -16,5 +16,16 @@ def prime_2?(int)
   end
 end
 
-puts Benchmark.measure { prime?(17) }
-puts Benchmark.measure { prime_2?(17) }
+Benchmark.bm(27) do |bm|
+  bm.report('using ternary') do
+    iterations.times do
+      prime?(111156)
+    end
+  end
+
+  bm.report('using if-else') do
+    iterations.times do
+      prime_2?(111156)
+    end
+  end
+end
